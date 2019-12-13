@@ -2,8 +2,10 @@
 
 import fileinput
 
+start, end = [ int(x) for x in (fileinput.input())[0].split("-") ]
+
 countA = countB = 0
-for n in range(193651,649729):
+for n in range(start, end):
     password = [int(d) for d in str(n)]
     adjacent = []
     i = count = maximum = 1

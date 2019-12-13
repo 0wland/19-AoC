@@ -6,10 +6,10 @@ import re
 import csv
 
 def main():
-    filenameA = re.sub( r'.py','a.txt', os.path.basename(__file__) )
+    filename = re.sub( r'.py','.txt', os.path.basename(__file__) )
     
     # A
-    wires = run_program( filenameA )
+    wires = run_program( filename )
     intersections = intersection( wires[0], wires[1] )
     i = 0
     closest = []

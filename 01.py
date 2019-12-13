@@ -6,13 +6,12 @@ import re
 import csv
 
 def main():
-    filenameA = re.sub( r'.py','a.txt', os.path.basename(__file__) )
-    filenameB = re.sub( r'.py','b.txt', os.path.basename(__file__) )
+    filename = re.sub( r'.py','.txt', os.path.basename(__file__) )
     
     # A
-    print( "A: ", run_programA( filenameA ) )
+    print( "A: ", run_programA( filename ) )
     # B
-    print( "B: ", run_programB( filenameB ) )
+    print( "B: ", run_programB( filename ) )
 
 def run_programA( filename ):
     f = open( filename, "r" )

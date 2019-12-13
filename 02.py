@@ -6,16 +6,15 @@ import re
 import csv
 
 def main():
-    filenameA = re.sub( r'.py','a.txt', os.path.basename(__file__) )
-    filenameB = re.sub( r'.py','b.txt', os.path.basename(__file__) )
+    filename = re.sub( r'.py','.txt', os.path.basename(__file__) )
     
     # A
-    print( "A: ", run_program( filenameA, 12, 2 ) )
+    print( "A: ", run_program( filename, 12, 2 ) )
     
     # B
     for noun in range( 0, 99 ):
         for verb in range( 0, 99 ):
-            if ( run_program( filenameB, noun, verb ) == 19690720 ):
+            if ( run_program( filename, noun, verb ) == 19690720 ):
                 print( "B: ", 100 * noun + verb )
                 return
 
